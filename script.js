@@ -7,7 +7,7 @@ function increment() {
   document.getElementById("cash_display").innerText = cash
 }
 
-function click() {
+function click_cash() {
   cash = cash + cash_per_click
   document.getElementById("cash_display").innerText = cash
 }
