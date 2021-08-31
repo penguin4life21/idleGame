@@ -7,11 +7,11 @@ t1_baseprice = 25
 t1_price_multi = 1.01
 
 function buy_gen() {
-  if (cash >= Math.floor(t1_baseprice * (t1_price_multi ** t1_gens))) {
-    cash -= Math.floor(t1_baseprice * (t1_price_multi ** t1_gens))
+  if (cash >= Math.round(t1_baseprice * (t1_price_multi ** t1_gens))) {
+    cash -= Math.round(t1_baseprice * (t1_price_multi ** t1_gens))
     cash_per_second += 1
     t1_gens += 1
-    document.getElementById("t1_price").innerText = Math.floor(t1_baseprice * (t1_price_multi ** t1_gens))
+    document.getElementById("t1_price").innerText = Math.round(t1_baseprice * (t1_price_multi ** t1_gens))
     update_display()
   } else {
     alert("ERROR, Not Enough Cash") 
@@ -26,7 +26,6 @@ function update_display() {
 
 function increment() {
   cash += cash_per_second
-  cash = Math.round(cash)
   update_display()
 }
 
