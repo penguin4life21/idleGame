@@ -26,6 +26,7 @@ function update_display() {
 
 function increment() {
   cash += cash_per_second
+  cash = Math.round(cash)
   update_display()
 }
 
