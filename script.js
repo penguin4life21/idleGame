@@ -7,8 +7,8 @@ function buy_gen() {
   if (cash >= 25) {
     cash -= 25
     cash_per_second += 1
-    update_display()
     t1_gens += 1
+    update_display()
   } else {
     alert("ERROR, Not Enough Cash") 
   }
