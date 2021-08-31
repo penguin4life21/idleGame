@@ -14,6 +14,7 @@ function buy_gen() {
 
 function update_display() {
    document.getElementById("cash_display").innerText = cash
+   document.getElementById("cash_per_second_display").innerText = cash_per_second
 }
 
 function increment() {
