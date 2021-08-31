@@ -9,7 +9,7 @@ t1_price_multi = 1.01
 function buy_gen() {
   if (cash >= Math.round(t1_baseprice * (t1_price_multi ** t1_gens))) {
     cash -= Math.round(t1_baseprice * (t1_price_multi ** t1_gens))
-    cash_per_second += 1
+    cash_per_second += t1_income
     t1_gens += 1
     document.getElementById("t1_price").innerText = Math.round(t1_baseprice * (t1_price_multi ** t1_gens))
     update_display()
