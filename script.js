@@ -7,7 +7,7 @@ t1_baseprice = 25
 t1_price_multi = 1.01
 
 function buy_gen() {
-  if (cash >= t2_baseprice * (t1_price_multi ** t1_gens)) {
+  if (cash >= Math.ceil(t2_baseprice * (t1_price_multi ** t1_gens))) {
     cash -= t2_baseprice * (t1_price_multi ** t1_gens)
     cash_per_second += 1
     t1_gens += 1
