@@ -11,14 +11,18 @@ function buy_gen() {
   }
 }
 
+function update_display() {
+   document.getElementById("cash_display").innerText = cash
+}
+
 function increment() {
   cash += cash_per_second
-  document.getElementById("cash_display").innerText = cash
+  update_display()
 }
 
 function click_cash() {
   cash += cash_per_click
-  document.getElementById("cash_display").innerText = cash
+  update_display()
 }
 
 setInterval(increment, 1000)
