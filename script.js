@@ -23,7 +23,7 @@ function buy_t1gen() {
   }
 }
 
-function buy_t1gen() {
+function buy_t2gen() {
   if (cash >= Math.round(t2_baseprice * (t2_price_multi ** t2_gens))) {
     cash -= Math.round(t2_baseprice * (t2_price_multi ** t2_gens))
     cash_per_second += t2_income
