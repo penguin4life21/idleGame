@@ -56,6 +56,7 @@ function update_display() {
    document.getElementById("cash_per_second_display").innerText = cash_per_second
    document.getElementById("t1_gens_owned").innerText = t1_gens
    document.getElementById("t2_gens_owned").innerText = t2_gens
+   document.getElementById("t3_gens_owned").innerText = t3_gens
 }
 
 function increment() {
