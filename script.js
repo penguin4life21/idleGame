@@ -9,6 +9,10 @@ t2_gens = 0
 t2_income = 10
 t2_baseprice = 100
 t2_price_multi = 1.02
+t3_gens = 0
+t3_income = 100
+t3_baseprice = 250
+t3_price_multi = 1.03
 
 
 function buy_t1gen() {
@@ -29,6 +33,18 @@ function buy_t2gen() {
     cash_per_second += t2_income
     t2_gens += 1
     document.getElementById("t2_price").innerText = Math.round(t2_baseprice * (t2_price_multi ** t2_gens))
+    update_display()
+  } else {
+    alert("ERROR, Not Enough Cash") 
+  }
+}
+
+function buy_t3gen() {
+  if (cash >= Math.round(t3_baseprice * (t3_price_multi ** t3_gens))) {
+    cash -= Math.round(t3_baseprice * (t3_price_multi ** t3_gens))
+    cash_per_second += t3_income
+    t3_gens += 1
+    document.getElementById("t3_price").innerText = Math.round(t3_baseprice * (t3_price_multi ** t3_gens))
     update_display()
   } else {
     alert("ERROR, Not Enough Cash") 
